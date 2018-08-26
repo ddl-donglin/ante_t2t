@@ -77,7 +77,7 @@ class SumPooling(text_problems.Text2ClassProblem):
                 '../prep_data/input_vec_sum.txt') as input_vec:
             for labal in antecedent_label:
                 yield {
-                    "inputs": input_vec.readline().strip(),
+                    "inputs": input_vec.readline().strip()[1:-2],
                     "label": int(labal.strip())
                 }
 
