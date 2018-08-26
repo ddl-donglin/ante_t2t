@@ -4,10 +4,10 @@ from tensor2tensor.data_generators import problem, text_problems
 import pickle as pickle
 
 @registry.register_problem
-class Trigger(text_problems.Text2ClassProblem):
+class TriggerFeature(text_problems.Text2ClassProblem):
 
     ROOT_DATA_PATH = '../data_manager/'
-    PROBLEM_NAME = 'trigger'
+    PROBLEM_NAME = 'trigger_feature'
 
     @property
     def is_generate_per_split(self):
@@ -64,7 +64,7 @@ class Trigger(text_problems.Text2ClassProblem):
         #     }
 
         with open('../prep_trigger_data/trigger_label.txt') as trigger_label, open(
-                '../prep_trigger_data/sen_vec.txt') as input_vec:
+                '../prep_trigger_data/sen_vec_feature.txt') as input_vec:
             for labal in trigger_label:
                 yield {
                     "inputs": input_vec.readline().strip()[1:-2],
