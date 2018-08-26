@@ -73,8 +73,8 @@ class AttentionGru(text_problems.Text2ClassProblem):
         #         "label": _sent.antecedent_label
         #     }
 
-        with open('../prep_data/antecedent_label.txt') as antecedent_label, open(
-                '../prep_data/input_vec_hidden.txt') as input_vec:
+        with open('../prep_ante_data/antecedent_label.txt') as antecedent_label, open(
+                '../prep_ante_data/input_vec_hidden.txt') as input_vec:
             for labal in antecedent_label:
                 yield {
                     "inputs": input_vec.readline().strip()[1:-2],

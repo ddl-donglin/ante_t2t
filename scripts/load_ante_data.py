@@ -7,17 +7,17 @@ if __name__ == '__main__':
         # get all the sentences for antecedent identification
         _sentences = pickle.load(f)
 
-    input_vec_sum = open("../prep_data/input_vec_sum.txt", 'w+')
-    input_vec_sum_feature = open("../prep_data/input_vec_sum_feature.txt", 'w+')
-    input_vec_hidden = open("../prep_data/input_vec_hidden.txt", 'w+')
-    input_vec_hidden_feature = open("../prep_data/input_vec_hidden_feature.txt", 'w+')
-    input_vec_attention = open("../prep_data/input_vec_attention.txt", 'w+')
-    input_vec_attention_feature = open("../prep_data/input_vec_attention_feature.txt", 'w+')
-    antecedent_label = open("../prep_data/antecedent_label.txt", 'w+')
-    trigger_label = open("../prep_data/trigger_label.txt", 'w+')
-    trigger = open("../prep_data/trigger.txt", 'w+')
-    aux_type = open("../prep_data/aux_type.txt", 'w+')
-    sen = open("../prep_data/sen.txt", 'w+')
+    input_vec_sum = open("../prep_ante_data/input_vec_sum.txt", 'w+')
+    input_vec_sum_feature = open("../prep_ante_data/input_vec_sum_feature.txt", 'w+')
+    input_vec_hidden = open("../prep_ante_data/input_vec_hidden.txt", 'w+')
+    input_vec_hidden_feature = open("../prep_ante_data/input_vec_hidden_feature.txt", 'w+')
+    input_vec_attention = open("../prep_ante_data/input_vec_attention.txt", 'w+')
+    input_vec_attention_feature = open("../prep_ante_data/input_vec_attention_feature.txt", 'w+')
+    antecedent_label = open("../prep_ante_data/antecedent_label.txt", 'w+')
+    trigger_label = open("../prep_ante_data/trigger_label.txt", 'w+')
+    trigger = open("../prep_ante_data/trigger.txt", 'w+')
+    aux_type = open("../prep_ante_data/aux_type.txt", 'w+')
+    sen = open("../prep_ante_data/sen.txt", 'w+')
 
     for _sent in _sentences:
         # # sum pooling, FloatTensor, Size: 400

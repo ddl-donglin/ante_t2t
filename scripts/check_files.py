@@ -15,7 +15,7 @@ sen = 'sen'
 trigger = 'trigger'
 trigger_label = 'trigger_label'
 
-prep_data = '../prep_data/'
+prep_data = '../prep_ante_data/'
 file_list=[
     antecedent_label, aux_type,
     input_vec_attention, input_vec_attention_feature,
