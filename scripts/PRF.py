@@ -1,6 +1,5 @@
 # coding=utf-8
 import os,sys
-from gen_result import gen_result
 
 def main(name, total, flag):
     path_data_from_trans = "./"
@@ -14,8 +13,6 @@ def main(name, total, flag):
     TN = 0
 
     task_name = name
-
-    gen_result(total, flag)
 
     decode_out_truth = '../decode_out_truth'
     decode_out_from_trans = '../decode_out_from_trans/'
@@ -49,8 +46,6 @@ def main(name, total, flag):
     for i in range(20, 25):
         with open(decode_out_truth + '/Wsj.Section' + str(i) + '_out.txt') as truth, open(
                 decode_out_from_trans + task_file_name + str(i) + '.txt') as trans:
-
-            false_arr = []
 
             for l1 in truth:
                 l1 = l1.strip()
@@ -141,9 +136,3 @@ def main(name, total, flag):
     print('FN = ' + str(FN))
     print('TP = ' + str(TP))
     print('TN = ' + str(TN))
-
-
-if __name__ == '__main__':
-    main('sum', 1000, int(sys.argv[1]))
-
-
